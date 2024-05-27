@@ -178,92 +178,102 @@
 // დავალება 3 -1
 
 
-function processNumbers(...numbers) {
-    if (numbers.length <= 2) {
-        throw new Error("Number of arguments must be greater than 2");
-    }
+// function processNumbers(...numbers) {
+//     if (numbers.length <= 2) {
+//         throw new Error("Number of arguments must be greater than 2");
+//     }
     
-    // Calculate the sum of the first two numbers
-    const sum = numbers[0] + numbers[1];
+//     // Calculate the sum of the first two numbers
+//     const sum = numbers[0] + numbers[1];
     
-    // Calculate the product of all numbers starting from the third one
-    let product = 1;
-    for (let i = 2; i < numbers.length; i++) {
-        product *= numbers[i];
-    }
+//     // Calculate the product of all numbers starting from the third one
+//     let product = 1;
+//     for (let i = 2; i < numbers.length; i++) {
+//         product *= numbers[i];
+//     }
     
-    // Return the result as a 2-element array
-    return [sum, product];
-}
+//     // Return the result as a 2-element array
+//     return [sum, product];
+// }
 
-// Example usage:
-const result = processNumbers(1, 2, 3, 4, 5);
-console.log(result); // Output: [3, 60]
+// // Example usage:
+// const result = processNumbers(1, 2, 3, 4, 5);
+// console.log(result); // Output: [3, 60]
 
 
 
-///-2
-function getCity(user) {
-    const { banks = [] } = user;
-    const { address: { city } = {} } = banks[2] || {};
-    return city;
-  }
+// ///-2
+// function getCity(user) {
+//     const { banks = [] } = user;
+//     const { address: { city } = {} } = banks[2] || {};
+//     return city;
+//   }
   
   
-  const user = {
-    name: "John Doe",
-    banks: [
-      { address: { city: "New York" } },
-      { address: { city: "Los Angeles" } },
-      { address: { city: "Chicago" } }
-    ]
-  };
+//   const user = {
+//     name: "John Doe",
+//     banks: [
+//       { address: { city: "New York" } },
+//       { address: { city: "Los Angeles" } },
+//       { address: { city: "Chicago" } }
+//     ]
+//   };
   
-  console.log(getCity(user)); // "Chicago"
-  console.log(getCity({})); // undefined
-  console.log(getCity({ banks: [] })); // undefined
-  console.log(getCity({ banks: [{}, {}, {}] })); // undefined
+//   console.log(getCity(user)); // "Chicago"
+//   console.log(getCity({})); // undefined
+//   console.log(getCity({ banks: [] })); // undefined
+//   console.log(getCity({ banks: [{}, {}, {}] })); // undefined
 
   
 
 
 
-  //-3 
+//   //-3 
 
-  function deepClone(obj) {
+//   function deepClone(obj) {
    
-    if (obj === null || typeof obj !== 'object') {
-      return obj;
-    }
+//     if (obj === null || typeof obj !== 'object') {
+//       return obj;
+//     }
   
    
-    if (Array.isArray(obj)) {
-      return obj.map(item => deepClone(item));
-    }
+//     if (Array.isArray(obj)) {
+//       return obj.map(item => deepClone(item));
+//     }
   
     
-    return Object.keys(obj).reduce((acc, key) => {
-      acc[key] = deepClone(obj[key]);
-      return acc;
-    }, {});
-  }
+//     return Object.keys(obj).reduce((acc, key) => {
+//       acc[key] = deepClone(obj[key]);
+//       return acc;
+//     }, {});
+//   }
   
  
-  const original = {
-    a: 1,
-    b: {
-      c: 2,
-      d: [3, 4, { e: 5 }]
-    }
-  };
+//   const original = {
+//     a: 1,
+//     b: {
+//       c: 2,
+//       d: [3, 4, { e: 5 }]
+//     }
+//   };
   
-  const copy = deepClone(original);
-  console.log(copy); 
-  console.log(copy !== original); 
-  console.log(copy.b !== original.b); 
-  console.log(copy.b.d !== original.b.d); 
-  console.log(copy.b.d[2] !== original.b.d[2]); 
+//   const copy = deepClone(original);
+//   console.log(copy); 
+//   console.log(copy !== original); 
+//   console.log(copy.b !== original.b); 
+//   console.log(copy.b.d !== original.b.d); 
+//   console.log(copy.b.d[2] !== original.b.d[2]); 
   
+
+
+
+
+
+  
+
+//   var p2 = new Object(); // Object() constructor function
+//   p2.name = "Steve"; // property
+//   console.log(p2.name)
 
 
 
